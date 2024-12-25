@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Epic Movies - Watch and download your favorite movies and web series in various resolutions like 480p, 720p, 1080p, and 4K. Explore Hollywood, Bollywood, Dual Audio, Hindi Dubbed, and more!" />
+    <meta name="keywords" content="Epic Movies, download movies, free movies, Dual Audio movies, 720p movies, 1080p movies, Hindi Dubbed, Hollywood movies, Bollywood movies, web series, TV series" />
+    <meta name="author" content="Epic Movies Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#333" />
+    <title>Epic Movies - Download Free Movies in HD, Dual Audio, 4K</title>
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Epic Movies - Watch and Download Free Movies in HD" />
+    <meta property="og:description" content="Explore a vast collection of movies in Dual Audio, 480p, 720p, 1080p, and 4K. Bollywood, Hollywood, Hindi Dubbed, and more!" />
+    <meta property="og:image" content="webimages/logoimg-removebg-preview.png" />
+    <meta property="og:url" content="https://www.epicmovies.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Epic Movies - Watch and Download Free Movies in HD" />
+    <meta name="twitter:description" content="Explore a vast collection of movies in Dual Audio, 480p, 720p, 1080p, and 4K. Bollywood, Hollywood, Hindi Dubbed, and more!" />
+    <meta name="twitter:image" content="webimages/logoimg-removebg-preview.png" />
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <img class="logoimg" src="webimages/logoimg-removebg-preview.png" alt="Epic Movies Logo - Download Free Movies" />
+      <div class="search-wrapper">
+        <input type="text" id="movieSearch" placeholder="Search for movies..." aria-label="Search for movies" />
+        <img src="webimages/search_icon.png" alt="Search Icon for Epic Movies" class="search-icon" id="search-icon" />
+      </div>
+      <div class="menu-toggle">
+        <span class="menu-text">Menu</span>
+        <span class="menu-icon">&#9776;</span> <!-- Hamburger Icon -->
+      </div>
+      <div class="genre" id="nav-menu">
+        <nav>
+          <ul>
+            <li><a href="/" title="Go to Epic Movies Home">Home</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">Movies</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">Language</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">Genre</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">Year</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">OTT</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">Web Series</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle">TV Series</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+      <div class="frame"><br>
+          <button type="button" class="btn btn-secondary" aria-label="View Dual Audio Movies">Dual Audio</button>
+          <button type="button" class="btn btn-secondary" aria-label="View 480p Movies">480P</button>
+          <button type="button" class="btn btn-secondary" aria-label="View 720p Movies">720P</button>
+          <button type="button" class="btn btn-secondary" aria-label="View 1080p Movies">1080P</button>
+          <button type="button" class="btn btn-secondary" aria-label="View 4K Movies">4K</button>
+          <button type="button" class="btn btn-secondary" aria-label="View Hindi Dubbed Movies">Hindi Dubbed</button>
+          <button type="button" class="btn btn-secondary" aria-label="View Hollywood Movies">Hollywood</button>
+      </div>
+
+      <!-- Cards Layout -->
+      <div class="container">
+        <div class="row" id="movie-list">
+          <!-- Cards will be dynamically injected here -->
+        </div>
+      </div>
+      
+      <div class="pagination"></div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <h1>EPICMOVIES</h1>
+            <p>Copyright &copy; 2024 Created By EpicMovies</p>
+            <div class="samp-row">
+                <a href="/how-to-download" title="Learn how to download movies">How To Download</a>
+                <a href="/report-dead-link" title="Report a dead link for movies">Report Dead Link</a>
+                <a href="/request-us" title="Request a movie or series">Request Us</a>
+                <a href="/contact-us" title="Contact Epic Movies Team">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

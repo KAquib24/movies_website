@@ -1,0 +1,560 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #373434 !important; /* Override background */
+}
+
+/* .column {
+  flex: 1;
+} */
+
+.header {
+  background-color: #27272a;
+  width: 1229px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column; /* Keep the header as a column layout */
+  align-items: flex-start; /* Align items to the start of the container */
+  border-radius: 10px;
+  color: white;
+  margin-left: 148px;
+}
+
+.header .top-row {
+  display: flex;
+  flex-direction: row; /* Row layout for logo and search bar */
+  align-items: center;
+  width: 100%;
+}
+
+.logoimg {
+  width: 250px; /* Increased logo size */
+  height: auto;
+  margin-right: 20px; /* Space between logo and search bar */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #27272a;
+  padding: 10px;
+  border-radius: 10px;
+  flex-grow: 1; /* Allow search bar to take up remaining space */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27272a;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.search-wrapper {
+  position: absolute;
+  right: 533px;
+  top: 48px;
+  display: flex;
+  align-items: center;
+}
+
+#movieSearch {
+  width: 538px;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the search icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #655858;
+  color: white;
+}
+
+
+.genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1229px;
+  margin-top: 20px; /* Add some space between logo/search and genre */
+}
+
+.genre nav {
+  background-color: #655858;
+  width: 131%;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.genre nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.genre nav li {
+  position: relative;
+}
+
+.genre nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+}
+
+.genre nav a:hover {
+  background-color: #27272a;
+  color: #000;
+}
+
+.genre nav ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+}
+
+.genre nav li:hover ul.dropdown {
+  display: block;
+}
+
+.genre nav ul.dropdown li {
+  margin: 0;
+}
+
+.genre nav ul.dropdown li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.genre nav ul.dropdown li a:hover {
+  background-color: #27272a;
+  color: black;
+}
+
+.genre nav ul li img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #27272a;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Position the icon to the right inside the search bar */
+  top: 50%; /* Center the icon vertically */
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  opacity: 0.8; /* Add slight transparency */
+}
+
+.search-icon:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+.search-input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27272a;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  padding-left: 419px;
+  margin-top: 39px;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping to multiple rows */
+  gap: 46px; /* Add spacing between cards */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align cards without stretching */
+  margin-top: 63px;
+  padding: 10px; /* Add padding around the container */
+  gap: 20px; /* Add gap between cards */
+}
+
+.card {
+  flex: 1 1 calc(20% - 20px); /* Default: 5 cards per row */
+  max-width: calc(20% - 20px);
+  min-width: 200px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #655858;
+}
+.card-img-top {
+  width: 100%;
+  height: 250px; /* Adjust image height */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Card body */
+.card-body {
+  text-align: center;
+  padding: 15px;
+  background-color: #655858;
+}
+
+.card-text {
+  font-size: 14px;
+  color: white;
+}
+
+/* Responsive spacing */
+/* @media (max-width: 768px) {
+  .card-img-top {
+    height: 200px;
+  }
+} */
+
+.pagination {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.foot {
+  background-color: #655858;
+  width: 100%;
+  padding: 20px; /* Add padding for better spacing */
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.foot h1 {
+  margin-bottom: 10px;
+  font-size: 20px; /* Adjust font size for responsiveness */
+  color: white;
+}
+
+.foot p {
+  margin-bottom: 10px;
+  font-size: 14px; /* Smaller font size for mobile */
+  color: white;
+}
+.samp-row a{
+  text-decoration: none;
+}
+.foot .samp-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 10px; /* Adjust spacing between links */
+  justify-content: center;
+}
+
+.foot samp {
+  color: white;
+  font-size: 12px; /* Smaller font size for mobile */
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+.foot samp:hover {
+  color: #b0b0b0; /* Greyish color on hover */
+}
+
+/* Default (Desktop and larger screens) */
+.menu-toggle {
+  display: none; /* Hidden by default */
+}
+
+/* Adjust Header */
+@media (max-width:560px) {
+@media (min-height:100vh) {
+  .container {
+    display: flex;
+  }
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    min-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #655858;
+  }
+
+  .col-12,
+  .col-sm-6,
+  .col-md-4,
+  .col-lg-2 {
+    flex: 0 0 36%;
+    max-width: 36%;
+    margin-right: 26px;
+    margin-right: -6px;
+    margin-left: 6px;
+  }
+  .card {
+    width: 100px;
+  }
+
+  .header {
+    background-color: black; /* Set background to black for small screens */
+    width: 100%; /* Make width 100% for responsiveness */
+    height: 200px; /* Set a height for the header (you can adjust this value) */
+    padding: 20px 0; /* Add some padding to the header */
+    margin-left: 0px; /* Remove left margin for small screens */
+    margin-right: 0px;
+  }
+
+  .logoimg {
+    width: 265px; /* Adjust logo size for small screens */
+    margin: 0 auto;
+    margin-top: -45px;
+  }
+
+  .search-wrapper {
+    position: static; /* Remove absolute positioning */
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    width: 80%; /* Adjust width to fit mobile screen */
+    margin-top: -35px;
+    margin-left: 41px;
+    padding-bottom: 18px;
+  }
+
+  .search-input {
+    width: 100%; /* Ensure search input takes up full width of search-wrapper */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 37px;
+    top: 14%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 5%;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .genre nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the top */
+    background-color: #655858;
+    width: 118%;
+    padding: 10px;
+    margin-top: -316px;
+  }
+
+  .genre nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Make the list items stack vertically */
+    margin: 0;
+    padding: 0;
+  }
+
+  .genre nav li {
+    position: relative;
+    margin-bottom: 10px; /* Adjust spacing between items if needed */
+  }
+
+  .genre nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .genre nav a:hover {
+    background-color: #27272a;
+    color: #000;
+  }
+
+  .menu-toggle {
+    display: flex; /* Show the menu toggle */
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #27272a;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    gap: 10px; /* Space between the text and icon */
+  }
+
+  #nav-menu {
+    display: none; /* Hidden sidebar by default */
+    position: fixed;
+    top: -22px;
+    width: 70%;
+    height: 100%;
+    background-color: #655858;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 2s ease-in-out;
+    z-index: 1000; /* Ensure it appears above content */
+  }
+
+  #nav-menu.open {
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    transition: left 2s ease-in-out;
+  }
+
+  .menu-toggle.open .menu-icon {
+    transform: rotate(45deg); /* Rotate the hamburger icon into 'X' */
+    transition: left 2s ease-in-out;
+  }
+
+  .menu-toggle.open .close-icon {
+    display: block; /* Show close icon when menu is open */
+    transition: left 2s ease-in-out;
+  }
+
+  .menu-toggle .close-icon {
+    display: none; /* Hide the close icon initially */
+    transition: left 2s ease-in-out;
+  }
+
+  /* Adjust for screens 480px or smaller */
+  .frame {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    padding-right: 10px;
+    padding-top: 22px;
+  }
+  body{
+    max-width: 100%;
+    overflow: auto;
+    min-height: 100vh; 
+  }
+  .frame .btn {
+    flex: 1 1 calc(25% - 20px); /* Buttons take full width with spacing */
+    max-width: 100%; /* Prevent buttons from exceeding their container */
+    text-align: center; /* Center align button text */
+    padding: 3px; /* Adjust padding for longer text */
+    font-size: 12px; /* Slightly reduce font size for longer labels */
+    white-space: normal; /* Allow the text to wrap */
+  }
+  .foot {
+    padding: 15px; /* Reduce padding for smaller screens */
+    margin-top: 40px; /* Adjust top margin */
+  }
+
+  .foot h1 {
+    font-size: 18px; /* Slightly smaller font for h1 */
+  }
+
+  .foot p {
+    font-size: 12px; /* Adjust font size for readability */
+  }
+
+  .foot .samp-row {
+    gap: 8px; /* Smaller gap between links */
+  }
+
+  .foot samp {
+    font-size: 10px; /* Smaller font size for mobile links */
+  }
+
+}
+}
+
+/* Pagination: adjust pagination button size */
+.pagination {
+  gap: 5px; /* Smaller gap between pagination buttons */
+}

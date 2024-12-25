@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about your favorite movie - including episodes, release date, IMDb rating, cast, language, quality, genre, storyline, screenshots, and download links.">
+    <meta name="keywords" content="Epic Movies, movie details, storyline, download links, IMDb rating, quality, language, genre, screenshots">
+    <meta name="author" content="Epic Movies Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Movie Details - Epic Movies">
+    <meta property="og:description" content="Explore the storyline, screenshots, and download links for your favorite movies.">
+    <meta property="og:image" content="webimages/logoimg-removebg-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.epicmovies.com/movie-details">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie Details - Epic Movies">
+    <meta name="twitter:description" content="Explore the storyline, screenshots, and download links for your favorite movies.">
+    <meta name="twitter:image" content="webimages/logoimg-removebg-preview.png">
+    <meta name="theme-color" content="#333">
+    <title>Movie Details - Epic Movies</title>
+    <link rel="stylesheet" href="moviepage.css">
+</head>
+<body>
+    <header>
+        <div class="header column">
+            <img class="logoimg" src="webimages/logoimg-removebg-preview.png" alt="Epic Movies Logo" />
+            <div class="search-wrapper">
+                <input type="text" id="movieSearch" placeholder="Search for movies..." onkeyup="searchMovies()" aria-label="Search movies by title" />
+                <img src="webimages/search_icon.png" alt="Search Icon for movies" class="search-icon" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="outerframe">
+            <div class="innerframe">
+                <h1 id="movie-title" style="font-size: 28px; color: #fff;"></h1> <!-- Dynamic Title -->
+            </div>
+            <div class="movie-detail_frame">
+                <img id="movie-image" class="card-img-top" alt="Movie poster for [Dynamic Title]"> <!-- Dynamic Image -->
+                <div class="details">
+                    <div class="movie-name">
+                        <h2 id="movie-name" style="color: #fff;"></h2>
+                        <small id="movie-year" style="color: gray;"></small>
+                    </div>
+                    <br>
+                    <div class="all-list">
+                        <div class="detail-list"><b>No of Episodes: </b><small id="movie-episodes"></small></div> <!-- Dynamic Episodes -->
+                        <div class="detail-list"><b>Release Date: </b><small id="movie-release-date"></small></div> <!-- Dynamic Release Date -->
+                        <div class="detail-list"><b>IMDB Rating: </b><small id="movie-imdb-rating"></small></div> <!-- Dynamic IMDb Rating -->
+                        <div class="detail-list"><b>Casts: </b><small id="movie-cast"></small></div> <!-- Dynamic Cast -->
+                        <div class="detail-list"><b>Language: </b><small id="movie-language"></small></div> <!-- Dynamic Language -->
+                        <div class="detail-list"><b>Quality: </b><small id="movie-quality"></small></div> <!-- Dynamic Quality -->
+                        <div class="detail-list"><b>Genre: </b><small id="movie-genre"></small></div> <!-- Dynamic Genre -->
+                    </div>
+                </div>
+            </div>
+            <div class="storyline">
+                <h2 style="font-size: 25px; color: whitesmoke;">Storyline:</h2>
+                <p id="movie-storyline" style="color: #fff;"></p> <!-- Dynamic Storyline -->
+            </div>
+            <div class="screenshots">
+                <h2 style="font-size: 25px; color: whitesmoke;">Screenshots:</h2>
+                <div id="movie-screenshots"></div> <!-- Dynamic Screenshots -->
+            </div>
+            <div class="download-links">
+                <h2 style="font-size: 25px; color: red;">Download Links:</h2>
+                <div id="movie-download-links"></div> <!-- Dynamic Download Links -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <h1>EPICMOVIES</h1>
+            <p>&copy; 2024 Created By EpicMovies</p>
+            <div class="samp-row">
+                <a href="/how-to-download" title="Learn how to download movies">How To Download</a>
+                <a href="/report-dead-link" title="Report a dead movie link">Report Dead Link</a>
+                <a href="/request-us" title="Request a movie or series">Request Us</a>
+                <a href="/contact-us" title="Contact the Epic Movies team">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="movieDetail.js"></script>
+</body>
+</html>

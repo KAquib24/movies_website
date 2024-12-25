@@ -1,0 +1,685 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #373434 !important; /* Add !important to override Bootstrap CSS */
+}
+
+.column {
+  flex: 1;
+}
+
+.header {
+  background-color: #27272a;
+  width: 1229px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  border-radius: 10px;
+  color: white;
+  margin-left: 148px;
+}
+
+.logoimg {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  left: 10;
+}
+.genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1229px;
+}
+
+.genre nav {
+  background-color: #655858;
+  width: 131%;
+  padding: 9px;
+  padding: 10px;
+  /* display: flex;
+      align-items: center; */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.genre nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.genre nav li {
+  position: relative;
+}
+
+.genre nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+}
+
+.genre nav a:hover {
+  background-color: #27272a;
+  color: #000;
+}
+
+.genre nav ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+}
+
+.genre nav li:hover ul.dropdown {
+  display: block;
+}
+
+.genre nav ul.dropdown li {
+  margin: 0;
+}
+
+.genre nav ul.dropdown li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.genre nav ul.dropdown li a:hover {
+  background-color: #27272a;
+  color: black;
+}
+.genre nav ul li img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+}
+.search-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #27272a;
+  padding: 10px;
+  border-radius: 10px;
+}
+.search-icon {
+  position: absolute;
+  right: 10px; /* Position the icon to the right inside the search bar */
+  top: 50%; /* Center the icon vertically */
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  opacity: 0.8; /* Add slight transparency */
+}
+
+.search-icon:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+.search-input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27272a;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.search-icon:hover + .search-input {
+  display: block;
+}
+
+.search-input {
+  display: none;
+}
+
+.search-icon:hover ~ .search-input {
+  display: block;
+}
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  padding-left: 419px;
+  margin-top: 39px;
+  gap: 15px;
+}
+/* Card layout styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align cards in the center */
+  gap: 15px; /* Add space between cards */
+  margin-top: 34px;
+}
+
+.col-md-3 {
+  margin-bottom: 36px;
+}
+
+.foot {
+  background-color: #655858;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.foot h1 {
+  margin-bottom: 10px;
+  color: white;
+}
+.detail-list{
+  margin-bottom: -9px;
+}
+.foot p {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.foot .samp-row {
+  display: flex;
+  gap: 15px; /* Adjust spacing between each samp */
+  padding-bottom: 7rem;
+}
+
+
+.foot samp {
+  color: white;
+  cursor: pointer;
+}
+.foot samp:hover {
+  color: #b0b0b0; /* Greyish color on hover */
+}
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #27272a;
+  width: 1229px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column; /* Keep the header as a column layout */
+  align-items: flex-start; /* Align items to the start of the container */
+  border-radius: 10px;
+  color: white;
+  margin-left: 148px;
+}
+
+.header .top-row {
+  display: flex;
+  flex-direction: row; /* Row layout for logo and search bar */
+  align-items: center;
+  width: 100%;
+}
+
+.logoimg {
+  width: 250px; /* Increased logo size */
+  height: auto;
+  margin-right: 20px; /* Space between logo and search bar */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #27272a;
+  padding: 10px;
+  border-radius: 10px;
+  flex-grow: 1; /* Allow search bar to take up remaining space */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27272a;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.search-wrapper {
+  position: absolute;
+  right: 533px;
+  top: 48px;
+  display: flex;
+  align-items: center;
+}
+
+#movieSearch {
+  width: 538px;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the search icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #655858;
+  color: white;
+}
+.outerframe {
+  height: auto;
+  width: 80%;
+  background-color: #655858;
+  top: 3%;
+  margin-left: 9.5%;
+  padding-top: 11px;
+  margin-top: 69px;
+  overflow: visible;
+  position: relative;
+  padding-bottom: 79px;
+}
+
+.innerframe {
+  height: auto;
+  width: 95%;
+  background-color: #514b4b;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+.movieCard {
+  /* Ensure the card doesn't exceed its container */
+
+  max-width: 100%;
+}
+
+.movie-detail_frame {
+  height: 350px;
+  width: 1190px;
+  background-color: #514b4b;
+  margin-left: 17px;
+  margin-top: 25px;
+  display: flex;
+}
+.movie-detail_frame img {
+  height: 290px;
+  width: 250px;
+  margin: 23px;
+}
+.movie-detail_frame b {
+  color: white;
+  font-weight: bolder;
+  font-size: 36px;
+  height: 290px;
+  width: 250px;
+}
+.details b {
+  font-weight: bold;
+  flex-shrink: 0; /* Prevents <b> from shrinking */
+  font-size: 25px;
+}
+.b {
+  gap: 5px;
+}
+.details small {
+  font-size: 25px;
+  color: white;
+}
+
+.all-list {
+  margin-top: -10px;
+  gap: 10px;
+}
+
+.movie-name {
+  margin-top: 10px;
+}
+.download-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  flex-direction: column;
+  gap: 10px;
+}
+.links {
+  font-size: 28px;
+  gap: 10px;
+}
+.innerframe p {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.innerframe p strong {
+  font-size: 2rem;
+  color: white;
+}
+.movie-name b {
+  margin-top: 10px;
+}
+.outerframe {
+  height: auto;
+  width: 80%;
+  background-color: #655858;
+  top: 3%;
+  margin-left: 9.5%;
+  padding-top: 11px;
+  margin-top: 69px;
+  overflow: visible;
+  position: relative;
+  padding-bottom: 79px;
+}
+
+.innerframe {
+  height: auto;
+  width: 74rem;
+  background-color: #514b4b;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.storyline {
+  margin: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 10rem;
+  align-items: center;
+}
+
+#movie-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+#movie-screenshots img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#movie-download-links {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #655858;
+  padding: 10px; /* Add some spacing inside the container */
+  gap: 50px;
+}
+
+#movie-download-links a {
+  text-decoration: none;
+  color: white;
+  border-radius: 5px; /* Slightly more rounded edges */
+  font-weight: bold;
+  font-size: 18px; /* Adjusted font size for better readability */
+  padding: 10px 20px; /* Add vertical and horizontal spacing for better proportions */
+  background-color: #8b5e5e; /* Button background color */
+  display: inline-block; /* Makes it behave like a button */
+  margin: 5px; /* Add space between buttons */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+#movie-download-links a:hover {
+  background-color: #a56f6f; /* Lighter shade on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+#movie-download-links a:active {
+  background-color: #6e4b4b; /* Darker shade when active */
+  transform: scale(0.98); /* Slight compression effect */
+}
+
+.social-buttons {
+  align-items: center;
+}
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between buttons */
+  margin-top: 10px; /* Space between paragraph and buttons */
+}
+
+.telegram,
+.instagram {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3; /* Background color for buttons */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.telegram:hover {
+  background-color: #0088cc; /* Telegram blue on hover */
+}
+
+.instagram:hover {
+  background-color: #c13584; /* Instagram pink on hover */
+}
+.comment-form {
+  max-width: 1186px;
+  margin: 75px auto;
+  padding: 20px;
+  /* background-color: #333; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.comment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+.comment-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+.comment-form button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.comment-form button:hover {
+  background-color: #666;
+}
+.comments-section {
+  max-width: 1186px;
+  margin: -55px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Comment container styles */
+.comment-container {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  transition: height 0.3s ease-in-out; /* Smooth transition for height expansion */
+  height: auto; /* or increase the height if needed */
+  max-height: 100%; /* Allow the container to grow freely */
+  overflow: visible; /* This ensures that if the comment container overflows, it scrolls */
+  margin-bottom: 10px;
+}
+
+/* Adjust Header */
+@media (max-width: 560px) {
+  @media (min-height: 100vh) {
+    .header {
+      background-color: black; /* Set background to black for small screens */
+      width: 100%; /* Make width 100% for responsiveness */
+      height: 200px; /* Set a height for the header (you can adjust this value) */
+      padding: 20px 0; /* Add some padding to the header */
+      margin-left: 0px; /* Remove left margin for small screens */
+      margin-right: 0px;
+    }
+
+    .logoimg {
+      width: 265px; /* Adjust logo size for small screens */
+      margin: 0 auto;
+      margin-top: -45px;
+    }
+
+    .search-wrapper {
+      position: static; /* Remove absolute positioning */
+      display: flex;
+      justify-content: center; /* Center the search bar */
+      width: 80%; /* Adjust width to fit mobile screen */
+      margin-top: -35px;
+      margin-left: 41px;
+      padding-bottom: 18px;
+    }
+
+    .search-input {
+      width: 100%; /* Ensure search input takes up full width of search-wrapper */
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 2.4rem;
+      top: 13%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2rem;
+      opacity: 0.8;
+      cursor: pointer;
+      cursor: pointer;
+    }
+
+    .frame {
+      width: 95%;
+    }
+    .outerframe {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  
+    .innerframe {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      padding: 1rem;
+    }
+  
+    .storyline {
+      font-size: 16px;
+      margin: 10px;
+    }
+  
+    .screenshots {
+      margin-top: 5rem;
+    }
+  
+    #movie-screenshots {
+      flex-direction: column;
+      gap: 5px;
+      overflow: hidden;
+      width: 89%;
+    }
+  
+    #movie-screenshots img {
+      max-height: 200px;
+    }
+    .movie-detail_frame{
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      padding: 1rem;
+      margin-right: 1rem;
+    }
+    /* .details{
+      display: flex;
+      flex-direction: column;
+
+    } */
+  }
+}
